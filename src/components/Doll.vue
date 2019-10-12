@@ -1029,10 +1029,10 @@
       const doll = this.vm;
       const named = Data.getNamedClothes();
       const data = btoa(encodeURIComponent(JSON.stringify({doll, named})));
+      this.copyToClipboard(hash);
       axios
         .post(`${config.helperUrl}/api/minimize/minjson`, {data, hash})
-        .then((r) => {
-          this.copyToClipboard(hash);
+        .then(() => {
           this.saveToCodeTooltip = true;
           setTimeout(() => this.saveToCodeTooltip = false, 3000);
         })
