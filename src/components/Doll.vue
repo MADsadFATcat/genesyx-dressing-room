@@ -1031,7 +1031,7 @@
       const data = btoa(encodeURIComponent(JSON.stringify({doll, named})));
       this.copyToClipboard(hash);
       axios
-        .post(`${config.helperUrl}/api/minimize/minjson`, {data, hash})
+        .post(`${config.helperUrl}/api/minimize/min`, {data, hash})
         .then(() => {
           this.saveToCodeTooltip = true;
           setTimeout(() => this.saveToCodeTooltip = false, 3000);
@@ -1041,7 +1041,7 @@
 
     public loadFromCode() {
       axios
-        .get(`${config.helperUrl}/api/minimize/getmin?hash=${this.saveCode}`)
+        .get(`${config.helperUrl}/api/minimize/get?hash=${this.saveCode}`)
         .then((r) => {
           if (!r.data) {
             this.codeNotFoundTooltip = true;

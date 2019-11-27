@@ -1,4 +1,4 @@
 export default {
   gameUrl: 'https://genesyx.ru',
-  helperUrl: 'https://genesyx.ml',
+  helperUrl: 'https://genesyx.tk',
 };
