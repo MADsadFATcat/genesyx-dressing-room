@@ -1,4 +1,4 @@
 export default {
   gameUrl: 'https://genesyx.ru',
-  helperUrl: 'https://genesyx.tk',
+  helperUrl: 'https://helper.evolution-genesyx.ru',
 };
